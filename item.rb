@@ -19,6 +19,8 @@
 class Store 
 
 
+attr_accessor :name, :price, :color
+
   def initialize(name, price, color)
     @name = name 
     @price = price 
@@ -26,25 +28,25 @@ class Store
   end 
 
 
-  def name 
-    @name 
-  end 
+  # def name 
+  #   @name 
+  # end 
 
-  def price 
-    @price 
-  end 
+  # def price 
+  #   @price 
+  # end 
 
-  def price=(price)
-    @price = price 
-  end 
+  # def price=(price)
+  #   @price = price 
+  # end 
 
-  def color 
-    @color
-  end 
+  # def color 
+  #   @color
+  # end 
 
-  def color=(color) 
-    @color = color
-  end 
+  # def color=(color) 
+  #   @color = color
+  # end 
 
 end 
 
