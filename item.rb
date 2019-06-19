@@ -22,10 +22,10 @@ class Store
 attr_reader :name, :price, :color
 attr_writer :name, :price, :color
 
-  def initialize(name, price, color)
-    @name = name 
-    @price = price 
-    @color = color 
+  def initialize(input_options)
+    @name = input_options[:name] 
+    @price = input_options[:price] 
+    @color = input_options[:color] 
   end 
 
 
@@ -51,7 +51,7 @@ attr_writer :name, :price, :color
 
 end 
 
-item1=Store.new("disc", 300, "blue")
+item1=Store.new({:name => "disc", :price => 300, :color =>"blue"})
 # item2=Store.new("pin", 400, "green")
 # item3=Store.new("disc", 3000, "yellow")
 
