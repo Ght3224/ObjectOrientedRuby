@@ -19,7 +19,8 @@
 class Store 
 
 
-attr_accessor :name, :price, :color
+attr_reader :name, :price, :color
+attr_writer :name, :price, :color
 
   def initialize(name, price, color)
     @name = name 
