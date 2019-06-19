@@ -37,7 +37,7 @@ attr_writer :name, :price, :color
   #   @price 
   # end 
 
-  # def price=(price)
+  # def price=(price),
   #   @price = price 
   # end 
 
@@ -58,3 +58,17 @@ item1=Store.new({:name => "disc", :price => 300, :color =>"blue"})
 p item1.name
 p item1.price
 p item1.color
+
+
+class Food < Store 
+
+attr_accessor :shelf_life 
+
+def initialize 
+  super 
+  @shelf_life = shelf_life
+end 
+
+
+
+end 
