@@ -1,4 +1,4 @@
-module  Vehicle 
+module  Movable 
 attr_accessor :speed, :direction 
   def initialize
     @speed = 0
@@ -19,8 +19,9 @@ attr_accessor :speed, :direction
 
 end 
 
+
 class Car
-  include Vehicle 
+  include Movable 
 
   def honk_horn
     puts "Beeeeeeep!"
@@ -29,7 +30,7 @@ end
 
 class Bike
 
-include Vehicle 
+include Movable 
 
   def ring_bell
     puts "Ring ring!"

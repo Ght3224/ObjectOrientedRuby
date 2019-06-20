@@ -1,27 +1,10 @@
-class Employee
-  attr_reader :first_name, :last_name, :active
-  attr_writer :active
+require_relative 'email_reportable'
+require_relative 'employee'
 
-  def initialize(input_options)
-    @first_name = input_options[:first_name]
-    @last_name = input_options[:last_name]
-    @salary = input_options[:salary]
-    @active = input_options[:active]
-  end
-
-  def print_info
-    puts "#{@first_name} #{@last_name} makes #{@salary} a year."
-  end
-
-  def give_annual_raise
-    @salary = 1.05 * @salary
-  end
-end
-
-employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
-employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
 
 class Manager < Employee 
+
+  include EmailReportable 
 
   def initialize(input_options) 
     super 
@@ -36,12 +19,6 @@ class Manager < Employee
   def fire_all_employees
     @employees.each{|employee| employee.active = false} 
   end 
-  
+
+
 end 
-
-
-manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-
-
-p manager.fire_all_employees
-p manager.give_all_raises
