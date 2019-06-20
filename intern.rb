@@ -4,7 +4,7 @@
 require_relative 'email_reportable'
 require_relative 'employee'
 
-class Intern  < Employee
+class Intern  < Actualize::Employee
   include EmailReportable 
 end 
 

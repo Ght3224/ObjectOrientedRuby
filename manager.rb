@@ -2,7 +2,7 @@ require_relative 'email_reportable'
 require_relative 'employee'
 
 
-class Manager < Employee 
+class Manager < Actualize::Employee 
 
   include EmailReportable 
 
